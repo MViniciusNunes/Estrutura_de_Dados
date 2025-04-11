@@ -169,34 +169,25 @@ void dias_em_tramitacao(processo *dados, int qtd) {
 }
 
 void mais_de_um_assunto(processo *dados, int qtd) {
-    double id;
-    printf("Digite o ID do processo: ");
-    scanf("%lf", &id);
-
     for (int i = 0; i < qtd; i++) {
-        if (dados[i].id == id) {
-            char temp[100];
-            strcpy(temp, dados[i].id_assunto);
-            remover_chaves(temp);
+        char temp[100];
+        strcpy(temp, dados[i].id_assunto);
+        remover_chaves(temp);
 
-            int count = 0;
-            char *tok = strtok(temp, ",");
-            while (tok) {
-                count++;
-                tok = strtok(NULL, ",");
-            }
+        int count = 0;
+        char *tok = strtok(temp, ",");
+        while (tok) {
+            count++;
+            tok = strtok(NULL, ",");
+        }
 
-            if (count > 1)
-                printf("Processo %.0lf tem MAIS de um assunto: %s\n", id, dados[i].id_assunto);
-            else
-                printf("Processo %.0lf tem apenas um assunto: %s\n", id, dados[i].id_assunto);
-
-            return;
+        if (count > 1) {
+            printf("Processo %.0lf tem MAIS de um assunto: %s\n", dados[i].id, dados[i].id_assunto);
         }
     }
-
-    printf("ID %.0lf não encontrado.\n", id);
 }
+
+
 
 void contar_assuntos(processo *dados, int qtd) {
     char **lista = NULL;
