@@ -2,7 +2,8 @@
 # Atividade 1 — Análise de Processos da Justiça Eleitoral (DF)
 
 📚 **Disciplina:** Estrutura de Dados — UCB  
-📅 **Entrega:** 11/04/2025  
+👨‍🏫 **Professor:** Marcelo Eustáquio  
+📅 **Semestre:** 1º/2025  
 
 ## 🎯 Objetivo
 Implementar, em C, um sistema para **ler, ordenar e analisar** dados de processos judiciais da Justiça Eleitoral do DF a partir de um arquivo CSV.
@@ -24,3 +25,4 @@ Implementar, em C, um sistema para **ler, ordenar e analisar** dados de processo
 ```bash
 gcc processo.c main.c -o processos.exe
 ./processos.exe
+
