@@ -1,9 +1,3 @@
-
----
-
-## **README da Atividade 2 — Estrada de Wakanda**
-
-```markdown
 # Atividade 2 — Estrada de Wakanda
 
 📚 **Disciplina:** Estrutura de Dados — UCB  
@@ -31,3 +25,4 @@ Criar funções em **C** para determinar a **menor vizinhança** de estrada entr
 ```bash
 gcc main.c cidades.c -o cidades.exe
 ./cidades.exe
+
